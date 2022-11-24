@@ -5,10 +5,10 @@ const style = {
 
 function App() {
   return (
-    <div className="">
-      <h1>
-        This Project Contains The Basic Setup Of A React App With Tailwind CSS
-      </h1>
+    <div className={style.appContainer}>
+      <section className="{style.sectionContainer}">
+        
+      </section>
     </div>
   );
 }
