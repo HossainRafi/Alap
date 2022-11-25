@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React, { useState } from "react";
 
 const style = {
   form: `h-14 w-full max-w-[728px]  flex text-xl absolute bottom-0`,
@@ -8,9 +7,13 @@ const style = {
 };
 
 const SendMessage = () => {
+  const [input, setInput] = useState("");
+
   return (
-    <form  className={style.form}>
+    <form className={style.form}>
       <input
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
         className={style.input}
         type="text"
         placeholder="Message"
@@ -20,6 +23,6 @@ const SendMessage = () => {
       </button>
     </form>
   );
-}
+};
 
-export default SendMessage
+export default SendMessage;
