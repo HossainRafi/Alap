@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useRef } from "react";
 
 const style = {
   main: `flex flex-col p-[10px]`,
 };
 
 const Chat = () => {
+    const scroll = useRef();
   return (
-    <div className={style.main}>Chat</div>
-  )
-}
+    <>
+          <main className={style.main}>Chat</main>
+          
+          <span ref={scroll}></span>
+    </>
+  );
+};
 
-export default Chat
+export default Chat;
