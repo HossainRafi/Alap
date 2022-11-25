@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { auth, db } from "../firebase";
+import toast, { Toaster } from "react-hot-toast";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 const style = {
@@ -14,7 +15,7 @@ const SendMessage = ({ scroll }) => {
   const sendMessage = async (e) => {
     e.preventDefault();
     if (input === "") {
-      alert("Please enter a valid message");
+      toast.error("Write Your Message First");
       return;
     }
     const { uid, displayName } = auth.currentUser;
@@ -40,6 +41,7 @@ const SendMessage = ({ scroll }) => {
       <button className={style.button} type="submit">
         Send
       </button>
+      <Toaster />
     </form>
   );
 };
