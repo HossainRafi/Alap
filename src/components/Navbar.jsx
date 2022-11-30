@@ -5,7 +5,7 @@ import SignIn from "./SignIn";
 import LogOut from "./LogOut";
 
 const style = {
-  nav: `bg-gray-800 h-14 flex justify-between items-center p-4`,
+  nav: `bg-gray-800 h-10 flex justify-between items-center py-4 pl-4`,
   heading: `text-white text-3xl`,
 };
 
